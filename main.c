@@ -1,10 +1,5 @@
 #include "header.h"
 
-void print_from(char c) {
-    
-}
-
-
 int main(int argc, char **argv) {
     if (argc == 1) {
         printf("No input is given!\n");
