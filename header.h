@@ -4,6 +4,9 @@
 #define HEADER_H
 
 #include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+
 #define BRAINFUCK_MEMORY_SIZE 30000 // standart braifuck
 
 #endif //HEADER_H
