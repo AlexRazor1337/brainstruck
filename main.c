@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
     
     unsigned char memory[BRAINFUCK_MEMORY_SIZE] = {0};
     unsigned int mem_ptr = 0;
+    char loop = 0;
     
     for (int i = 0; i < strlen(argv[1]) + 1; ++i) {
         switch (argv[1][i]) {
@@ -31,18 +32,28 @@ int main(int argc, char **argv) {
             break;
             case '[':
             if (memory[mem_ptr] == 0) {
-                while(argv[1][i] != ']') {
+                ++loop;
+                while(loop) {
                     ++i;
+                    if (argv[1][i] == '[') {
+                        ++loop;
+                    } else if (argv[1][i] == ']') {
+                        --loop;
+                    }
                 }
-                ++i;
             } else continue;
             break;
             case ']':
             if (memory[mem_ptr] != 0) {
-                while(argv[1][i] != '[') {
+                ++loop;
+                while(loop) {
                     --i;
+                    if (argv[1][i] == '[') {
+                        --loop;
+                    } else if (argv[1][i] == ']') {
+                        ++loop;
+                    }
                 }
-                --i;
             } else continue;
             break;
             default:
