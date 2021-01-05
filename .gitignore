@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+hw
 
 # Object files
 *.o
@@ -36,6 +37,7 @@
 *.x86_64
 *.hex
 brainstruck
+brainstruck_minimal
 
 # Debug files
 *.dSYM/

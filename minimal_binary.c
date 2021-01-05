@@ -1,19 +1,19 @@
-#include <stdlib.h>
-#include <string.h>
+#include <unistd.h>
 
 #define BRAINFUCK_MEMORY_SIZE 30000
 
 int main(int argc, char **argv) {
     if (argc == 1) {
-        printf("No input is given!\n");
-        exit(EXIT_FAILURE);
+        write(1, "No input is given!\n", 19);
+        return 1;
     }
     
-    unsigned char memory[BRAINFUCK_MEMORY_SIZE] = {0};
+    static unsigned char memory[BRAINFUCK_MEMORY_SIZE] = {0};
     unsigned int mem_ptr = 0;
     char loop = 0;
     
-    for (int i = 0; i < strlen(argv[1]); ++i) {
+    int i = 0;
+    while(argv[1][i]) {
         switch (argv[1][i]) {
             case '>':
             ++mem_ptr;
@@ -28,10 +28,10 @@ int main(int argc, char **argv) {
             --memory[mem_ptr];
             break;
             case '.':
-            printf("%c", memory[mem_ptr]);
+            write(1, &memory[mem_ptr], 1);
             break;
             case ',':
-            scanf("%c", &memory[mem_ptr]);
+            read(0, &memory[mem_ptr], 1);
             break;
             case '[':
             if (memory[mem_ptr] == 0) {
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
                         --loop;
                     }
                 }
-            } else continue;
+            }
             break;
             case ']':
             if (memory[mem_ptr] != 0) {
@@ -57,11 +57,10 @@ int main(int argc, char **argv) {
                         ++loop;
                     }
                 }
-            } else continue;
+            }
             break;
-            default:
-            continue;
         }
+        ++i;
     }
     return 0;
 }
