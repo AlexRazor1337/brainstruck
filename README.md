@@ -22,3 +22,5 @@ Now when you have a working interpreter you can use it in at least two ways:
 ## Version list
 - Default (05/01/2021)  
 Source code is 67 lines of code and 1698 bytes long. Binary is 16664 bytes in size. 
+- Minimal binary (05/01/2021)  
+Source code is 66 lines of code and 1607 bytes long. Binary is 10856 bytes in size. 
