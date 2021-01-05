@@ -5,7 +5,7 @@
  | '_ \| '__/ _` | | '_ \/ __| __| '__| | | |/ __| |/ /
  | |_) | | | (_| | | | | \__ | |_| |  | |_| | (__|   < 
  |_.__/|_|  \__,_|_|_| |_|___/\__|_|   \__,_|\___|_|\_\
-                                                                                                             
+                                                        
 </pre>                                                                                                       
                                                                                                                                                                                                         
 Brainstruck is my try at brainfuck interpreter. Written on C99 using standart libraries.
