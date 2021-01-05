@@ -28,8 +28,11 @@ Now when you have a working interpreter you can use it in at least two ways:
 - Load code from the file using **xargs**:  
 ```cat file | xargs -0 ./brainstruck```
 
-## Version list
+## Versions
+To make this less boring, I've set a goal to create a few versions of this interpreter: a default one(human readable), one with minimal size of binary and one with minimal size of source file.
+
 - Default (05/01/2021)  
 Source code is 67 lines of code and 1698 bytes long. Binary is 16664 bytes in size. 
 - Minimal binary (05/01/2021)  
-Source code is 66 lines of code and 1607 bytes long. Binary is ~~10856~~ ~~10760~~ ~~10704~~ ~~10696~~ 10624 bytes in size. 
+Source code is 66 lines of code and 1607 bytes long. Binary is ~~10856~~ ~~10760~~ ~~10704~~ ~~10696~~ 10624 bytes in size  
+- Minimal source (**TODO**)
