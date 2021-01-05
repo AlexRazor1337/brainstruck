@@ -29,7 +29,7 @@ Now when you have a working interpreter you can use it in at least two ways:
 ```cat file | xargs -0 ./brainstruck```
 
 ## Versions
-To make this less boring, I've set a goal to create a few versions of this interpreter: a default one(human readable), one with minimal size of binary and one with minimal size of source file.
+To make this more spicy, I've set a goal to create a few versions of this interpreter: a default one(human readable), one with minimal size of binary and one with minimal size of source file.
 
 - Default (05/01/2021)  
 Source code is 67 lines of code and 1698 bytes long. Binary is 16664 bytes in size. 
