@@ -1,4 +1,7 @@
-#include "header.h"
+#include <stdlib.h>
+#include <string.h>
+
+#define BRAINFUCK_MEMORY_SIZE 30000
 
 int main(int argc, char **argv) {
     if (argc == 1) {
